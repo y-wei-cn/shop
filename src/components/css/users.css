@@ -1,0 +1,10 @@
+.el-row {
+  background-color: #EAEEF1;
+  border-left: 0;
+}
+.el-breadcrumb {
+  height: 50px;
+  background-color: #D4DAE0;
+  line-height: 50px;
+  padding-left: 20px;
+}

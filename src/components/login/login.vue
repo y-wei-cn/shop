@@ -79,7 +79,9 @@ export default {
               message: '登入成功',
               type: 'success'
             })
-
+            // 把token 保存到本地地址，用于判断是否登入过
+            localStorage.setItem('token', res.data.data.token)
+            // 判断登入成功后 进入home页面（编程式导航）
             this.$router.push('/home')
           } else {
             this.$message({
@@ -88,6 +90,7 @@ export default {
               type: 'error'
             })
           }
+          // console.log(res.data.data.token)
         })
       })
     },
@@ -98,7 +101,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang='less'>
 .el-row {
   height: 100%;
   background-color: #2d434c;
